@@ -1,0 +1,34 @@
+{
+    "version": 1,
+    "author": "yago",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-pi-pico-w", "id": "pico", "top": -22.45, "left": 3.55, "attrs": {} },
+      {
+        "type": "wokwi-membrane-keypad",
+        "id": "keypad1",
+        "top": -424.4,
+        "left": -90.4,
+        "attrs": {}
+      },
+      { "type": "wokwi-led", "id": "led1", "top": 102, "left": -149.8, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": 102,
+        "left": -101.8,
+        "attrs": { "color": "green" }
+      },
+      { "type": "wokwi-led", "id": "led3", "top": 102, "left": -53.8, "attrs": { "color": "blue" } },
+      {
+        "type": "wokwi-buzzer",
+        "id": "bz1",
+        "top": 83.7,
+        "left": 167.7,
+        "rotate": 90,
+        "attrs": { "volume": "0.1" }
+      }
+    ],
+    "connections": [ [ "pico:GP0", "$serialMonitor:RX", "", [] ], [ "pico:GP1", "$serialMonitor:TX", "", [] ] ],
+    "dependencies": {}
+  }
