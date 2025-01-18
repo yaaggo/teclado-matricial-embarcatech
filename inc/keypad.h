@@ -7,5 +7,7 @@
 #define KEYPAD_COLS 4
 
 // Cabeçalhos
+void keypad_init();
+char keypad_return();
 
 #endif
