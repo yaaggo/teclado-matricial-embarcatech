@@ -9,6 +9,7 @@
 void buzzer_set_frequency(uint pin, uint frequency);
 void buzzer_play(uint pin, uint frequency);
 void buzzer_stop(uint pin);
+void buzzer_beep_2sec(uint gpio);
 
 
 

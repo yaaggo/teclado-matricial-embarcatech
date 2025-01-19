@@ -28,3 +28,18 @@ void buzzer_stop(uint pin) {
     gpio_put(pin, false); 
 }
 
+// Função para fazer o beep do buzzer por 2 segundos
+void buzzer_beep_2sec(uint gpio) {
+    uint slice_num = pwm_gpio_to_slice_num(gpio);
+    uint clock_div = 4; // Divisor do clock
+    uint sys_clock = clock_get_hz(clk_sys); // Frequência do sistema
+    uint wrap = sys_clock / (clock_div * BUZZER_FREQ) - 1; // Calcula o valor de "wrap"
+
+    pwm_set_clkdiv(slice_num, clock_div); // Define o divisor do clock
+    pwm_set_wrap(slice_num, wrap); // Define o valor de "wrap"
+    pwm_set_gpio_level(gpio, wrap / 2); // Ciclo de trabalho de 50%
+    pwm_set_enabled(slice_num, true); // Habilita o PWM
+
+    sleep_ms(2000); // Aguarda 2 segundos para o beep
+
+    pwm_set_enabled(slice_num, false); // Desabilita o PWM
