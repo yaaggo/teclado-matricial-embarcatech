@@ -59,6 +59,7 @@ target_include_directories(teclado-matricial-embarcatech PRIVATE
 # Add any user requested libraries
 target_link_libraries(teclado-matricial-embarcatech 
         hardware_pwm
+        hardware_clocks
         )
 
 pico_add_extra_outputs(teclado-matricial-embarcatech)
