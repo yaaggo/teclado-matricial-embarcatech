@@ -22,7 +22,7 @@
 
 <h2></h2>
 <h2 align="center"> Vídeo :video_camera: </h2>
-<p> &emsp;&emsp;&emsp;&emsp; Aqui está o link para o vídeo com uma prática de simulação associada a esta tarefa: </p>
+<p> &emsp;&emsp;&emsp;&emsp; Aqui está o link para o vídeo com uma prática de simulação associada a esta tarefa: https://www.youtube.com/watch?v=2k1IBgRsU3I</p>
 
 <h2></h2>
 <h2 align="center"> Como utilizar :computer_mouse: </h2>
